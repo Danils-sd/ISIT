@@ -79,7 +79,6 @@ class PhoneClassifierApp:
             default="active",
         )
         self.next_button.pack(side="right")
-
         self.notice_label = tk.Label(
             self.form_frame,
             text="Вопрос о станции метро не используется: в обучающем датасете нет этого признака.",
@@ -115,15 +114,15 @@ class PhoneClassifierApp:
 
     def _show_question(self) -> None:
         question = VISIBLE_QUESTIONS[self.current_index]
+        for child in self.answer_frame.winfo_children():
+            child.destroy()
+
         self.progress_label.configure(
             text=f"Вопрос {self.current_index + 1} из {len(VISIBLE_QUESTIONS)}"
         )
         self.question_label.configure(text=question.text)
         self.error_label.configure(text="")
         self.current_answer_var.set(str(self.answers.get(question.key, "")))
-
-        for child in self.answer_frame.winfo_children():
-            child.destroy()
 
         if question.kind in {"choice", "eye_color"}:
             for option in question.options:
@@ -132,6 +131,7 @@ class PhoneClassifierApp:
                     text=option,
                     variable=self.current_answer_var,
                     value=option,
+                    tristatevalue="unselected",
                     anchor="w",
                     justify="left",
                     wraplength=680,

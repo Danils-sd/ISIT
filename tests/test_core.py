@@ -66,6 +66,33 @@ class CoreTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             KNNClassifier(3).fit(np.asarray([[0.0], [1.0]]), np.asarray([0, 1]))
 
+    def test_app_radiobuttons_tristate_prevented(self) -> None:
+        import tkinter as tk
+        from app import PhoneClassifierApp
+
+        root = tk.Tk()
+        try:
+            app = PhoneClassifierApp(root)
+            root.update()
+
+            rbs = [w for w in app.answer_frame.winfo_children() if isinstance(w, tk.Radiobutton)]
+            self.assertGreater(len(rbs), 0)
+            for rb in rbs:
+                self.assertNotEqual(rb.cget("tristatevalue"), "")
+
+            # Answer and move to next question
+            app.current_answer_var.set(rbs[0].cget("value"))
+            app._go_next()
+            root.update()
+
+            next_rbs = [w for w in app.answer_frame.winfo_children() if isinstance(w, tk.Radiobutton)]
+            self.assertGreater(len(next_rbs), 0)
+            self.assertEqual(app.current_answer_var.get(), "")
+            for rb in next_rbs:
+                self.assertNotEqual(rb.cget("tristatevalue"), "")
+        finally:
+            root.destroy()
+
 
 if __name__ == "__main__":
     unittest.main()
