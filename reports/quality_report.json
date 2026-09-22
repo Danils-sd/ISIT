@@ -1,0 +1,184 @@
+{
+  "dataset": {
+    "rows": 44,
+    "feature_count": 20,
+    "target_column": "phone",
+    "class_counts": {
+      "0": 16,
+      "1": 28
+    },
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "extra_columns": []
+  },
+  "candidate_k": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19
+  ],
+  "cross_validation": {
+    "folds": 5,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "primary_metric": "mean_macro_f1",
+    "results": [
+      {
+        "k": 1,
+        "mean_accuracy": 0.4224444444444444,
+        "std_accuracy": 0.13368222870525812,
+        "mean_macro_f1": 0.3776400266400266,
+        "std_macro_f1": 0.1377530074192208,
+        "mean_balanced_accuracy": 0.39,
+        "std_balanced_accuracy": 0.1341847813858023,
+        "evaluations": 25
+      },
+      {
+        "k": 3,
+        "mean_accuracy": 0.48133333333333334,
+        "std_accuracy": 0.12293107574049797,
+        "mean_macro_f1": 0.41812842712842707,
+        "std_macro_f1": 0.12103707474887879,
+        "mean_balanced_accuracy": 0.43733333333333335,
+        "std_balanced_accuracy": 0.11604884029292727,
+        "evaluations": 25
+      },
+      {
+        "k": 5,
+        "mean_accuracy": 0.5825555555555556,
+        "std_accuracy": 0.14372796664206214,
+        "mean_macro_f1": 0.5211702741702742,
+        "std_macro_f1": 0.1547158198891824,
+        "mean_balanced_accuracy": 0.5376666666666666,
+        "std_balanced_accuracy": 0.14533715591303173,
+        "evaluations": 25
+      },
+      {
+        "k": 7,
+        "mean_accuracy": 0.6622222222222223,
+        "std_accuracy": 0.12681764880876287,
+        "mean_macro_f1": 0.602057165057165,
+        "std_macro_f1": 0.1446910790592445,
+        "mean_balanced_accuracy": 0.616,
+        "std_balanced_accuracy": 0.13422452168744065,
+        "evaluations": 25
+      },
+      {
+        "k": 9,
+        "mean_accuracy": 0.6512222222222221,
+        "std_accuracy": 0.12477406742282054,
+        "mean_macro_f1": 0.5827202797202797,
+        "std_macro_f1": 0.14914796317357207,
+        "mean_balanced_accuracy": 0.597,
+        "std_balanced_accuracy": 0.13603267581316222,
+        "evaluations": 25
+      },
+      {
+        "k": 11,
+        "mean_accuracy": 0.624,
+        "std_accuracy": 0.12055908852990095,
+        "mean_macro_f1": 0.5245229215229216,
+        "std_macro_f1": 0.15627301639696822,
+        "mean_balanced_accuracy": 0.5513333333333333,
+        "std_balanced_accuracy": 0.13065391094201673,
+        "evaluations": 25
+      },
+      {
+        "k": 13,
+        "mean_accuracy": 0.6241111111111111,
+        "std_accuracy": 0.12881875486488087,
+        "mean_macro_f1": 0.5300437340437341,
+        "std_macro_f1": 0.16577857724811973,
+        "mean_balanced_accuracy": 0.5573333333333332,
+        "std_balanced_accuracy": 0.14619849520429407,
+        "evaluations": 25
+      },
+      {
+        "k": 15,
+        "mean_accuracy": 0.5837777777777778,
+        "std_accuracy": 0.12866282857449593,
+        "mean_macro_f1": 0.4733150183150183,
+        "std_macro_f1": 0.14082875039505194,
+        "mean_balanced_accuracy": 0.508,
+        "std_balanced_accuracy": 0.12421934005799758,
+        "evaluations": 25
+      },
+      {
+        "k": 17,
+        "mean_accuracy": 0.6255555555555555,
+        "std_accuracy": 0.11804215610231773,
+        "mean_macro_f1": 0.5112242202242201,
+        "std_macro_f1": 0.15254420880525538,
+        "mean_balanced_accuracy": 0.541,
+        "std_balanced_accuracy": 0.12492041911197346,
+        "evaluations": 25
+      },
+      {
+        "k": 19,
+        "mean_accuracy": 0.6457777777777778,
+        "std_accuracy": 0.1543467316798348,
+        "mean_macro_f1": 0.5090638250638251,
+        "std_macro_f1": 0.19176645125731553,
+        "mean_balanced_accuracy": 0.5536666666666666,
+        "std_balanced_accuracy": 0.15470545490634055,
+        "evaluations": 25
+      }
+    ]
+  },
+  "majority_baseline": {
+    "mean_accuracy": 0.6366666666666666,
+    "mean_macro_f1": 0.38884615384615384,
+    "mean_balanced_accuracy": 0.5
+  },
+  "chosen_k": 7,
+  "production_config_k": 7,
+  "holdout_check": {
+    "test_rows": 11,
+    "metrics": {
+      "accuracy": 0.9090909090909091,
+      "macro_f1": 0.8952380952380952,
+      "balanced_accuracy": 0.875,
+      "per_class": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571
+        },
+        "1": {
+          "precision": 0.875,
+          "recall": 1.0,
+          "f1": 0.9333333333333333
+        }
+      },
+      "confusion_matrix": [
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          7
+        ]
+      ]
+    }
+  },
+  "label_mapping": {
+    "0": "iPhone",
+    "1": "Android"
+  },
+  "notes": [
+    "The normalized dataset is small, so cross-validation spread must be reported.",
+    "The metro question is not a model feature and is omitted from the UI."
+  ]
+}
