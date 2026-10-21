@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "total_nodes": 1988,
+    "total_edges": 2169,
+    "component_nodes": 1988,
+    "component_edges": 2169,
+    "is_connected": true,
+    "number_of_components": 1,
+    "density": 0.0010981844767649683,
+    "group_members_analyzed": 5
+  },
+  "members_centrality": [
+    {
+      "user_id": 593281333,
+      "degree": 30,
+      "betweenness": 0.43740925400291636,
+      "closeness": 0.271856615132029,
+      "eigenvector": 0.009527306864366227,
+      "rank_betweenness": 1,
+      "rank_closeness": 2,
+      "rank_eigenvector": 4
+    },
+    {
+      "user_id": 503794125,
+      "degree": 31,
+      "betweenness": 0.4306241824726066,
+      "closeness": 0.28718022835669893,
+      "eigenvector": 0.019647456181067294,
+      "rank_betweenness": 2,
+      "rank_closeness": 1,
+      "rank_eigenvector": 3
+    },
+    {
+      "user_id": 332058537,
+      "degree": 30,
+      "betweenness": 0.319403506241347,
+      "closeness": 0.25520164397636785,
+      "eigenvector": 0.0727540743291746,
+      "rank_betweenness": 3,
+      "rank_closeness": 3,
+      "rank_eigenvector": 2
+    },
+    {
+      "user_id": 567281176,
+      "degree": 30,
+      "betweenness": 0.26515087877472576,
+      "closeness": 0.24035321156404985,
+      "eigenvector": 0.3178187977276226,
+      "rank_betweenness": 4,
+      "rank_closeness": 4,
+      "rank_eigenvector": 1
+    },
+    {
+      "user_id": 436106936,
+      "degree": 30,
+      "betweenness": 0.199964277507015,
+      "closeness": 0.2099313259376651,
+      "eigenvector": 0.00074156861329682,
+      "rank_betweenness": 5,
+      "rank_closeness": 5,
+      "rank_eigenvector": 5
+    }
+  ]
+}

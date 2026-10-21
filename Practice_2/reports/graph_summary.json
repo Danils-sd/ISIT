@@ -1,0 +1,10 @@
+{
+  "total_nodes": 1988,
+  "total_edges": 2169,
+  "component_nodes": 1988,
+  "component_edges": 2169,
+  "is_connected": true,
+  "number_of_components": 1,
+  "density": 0.0010981844767649683,
+  "group_members_analyzed": 5
+}
