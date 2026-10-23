@@ -1,0 +1,3 @@
+﻿model,n_total,n_unknown,accuracy,precision_military,recall_military,f1_military,TP,TN,FP,FN
+Llama-3.2-Vision (Cloudflare),26,0,0.962,0.929,1.0,0.963,13,12,1,0
+Qwen3.8-27B (Groq),26,0,0.962,0.929,1.0,0.963,13,12,1,0
